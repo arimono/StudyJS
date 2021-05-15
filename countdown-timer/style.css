@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    color: #880808;
+    text-align: center;
+
+    background-image: url(/countdown-timer/city.jpg);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+   
+}
+
+h1{
+    font-size: 4em;
+    margin-top: 2em;
+    
+    
+}
+.countdown-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 3em;
+}
+
+.big-text{
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.count-c{
+    text-align: center;
+    text-transform: capitalize;
+}
+
