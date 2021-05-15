@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    background-color: #b3cdd1;
+    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard-container{
+    background-color: #fffafa;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px rgba(100, 100, 100, 0.1);
+    max-width: 100%;
+    overflow: hidden;
+    
+}
+#question_text{
+    padding: 2rem 1rem 0rem 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+    padding: 0.5;
+}
+ul li{
+    margin:1rem 0;
+}
+ul li label{
+    cursor: pointer;
+}
+#flashcard_btn{
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    color: #fffafa;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.flashcard:hover {
+    opacity: 0.8;
+}
+.scoreText{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    min-height: 5cm;
+    font-size: 1.5rem;
+}
