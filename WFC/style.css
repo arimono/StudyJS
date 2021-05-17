@@ -57,27 +57,34 @@
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px red; 
 }
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     min-height: 100vh;
     color: #fff;
-    text-align: center;
-    font-size: 2vw;
+    
+    font-size: 2rem;
+    
+    
 }
 
 .main_container{
     
     background-color: #7f5a83;
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-
     display: flex;
     justify-content: center;
     width: 100%;
+    min-height: 100%;
     padding: 5em 2em;
     position: relative;
-    bottom: 0;
+    text-align: center;
+    
+    
     /* align-items: center; */
 }
 
@@ -89,7 +96,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     opacity: 0.3;
 
     background-blend-mode: darken;
@@ -97,12 +104,7 @@ body {
     background-position: center center;
     background-size: cover;
 }
-/* @media only screen and (max-width: 600px) {
-    .main_container:before{
-        content: "";
-        background-image: none;
-    }
-} */
+
 #canvas_box{
     position: relative;
     display: block;
@@ -114,8 +116,6 @@ body {
     border-style: solid;
     border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;
     box-shadow: 5px 5px 50px #010309;
-    
-
     
     text-align: center;
     align-items: center;
@@ -129,8 +129,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
-
+.myName{
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    padding: 2rem 0rem 4rem;
+}
 .profile{
     border-radius: 50%;
     width: 40%;
@@ -159,16 +164,16 @@ body {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-
+/* countdown---------------------------------------------------------------------------------------------------------- */
 .small-text{
-    font-size: 1.5vw;
+    font-size: 1rem;
 
     margin: 0 1rem;
 }
 h4{
-    font-size: 2.4vw;
+    font-size: 2.5rem;
 }
-/* countdown---------------------------------------------------------------------------------------------------------- */
+
 .countdown-container{
     display: flex;
     flex-wrap: wrap;
@@ -180,14 +185,62 @@ h4{
     text-align: center;
     text-transform: capitalize;
 }
+/* white space--------------------------------------------------------------------------------------------- */
+.second_container{
+    background: linear-gradient(159deg, #332a2a, #1b0179);
+    background-size: 400% 400%;
+    min-height: 600px;
+    -webkit-animation: blackspace 21s ease infinite;
+    -moz-animation: blackspace 21s ease infinite;
+    animation: blackspace 21s ease infinite;
+}
+
+@-webkit-keyframes blackspace {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes blackspace {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes blackspace {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+    
 
 /* Flashcard--------------------------------------------------------------------------------------------- */
-.second_container{
+.third_container{
+    margin: 0;
+    background-color: #770a13;
+    background-image: linear-gradient(315deg, #b3cdd1 0%, #1b31c0 100%);
+    background-blend-mode: lighten;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 1rem 1rem;
+}
+.third_container:before{
+    content: "";
+    background-image: url(./city.jpg);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .flashcard-container{
+    position: relative;
     background-color: #fffafa;
     width: 400px;
     border-radius: 10px;
@@ -235,4 +288,14 @@ ul li label{
     text-align: center;
     min-height: 5cm;
     font-size: 1.5rem;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    body{font-size: 2vw;}
+    .myName{font-size: 2.3vw;}
+    h4{font-size: 1vw;}
+    .small-text{font-size: 1.7vw;}
+    
 }
