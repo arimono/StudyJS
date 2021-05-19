@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"defer></script>
+    <link rel="stylesheet" href="../WFC/css/style.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../WFC/js/script.js"defer></script>
     </head>
-<body>
-    <div class="main_container">
+<body class="body_container">
+    <div class="main_container" >
         <div id="canvas_box">
             <div class="row">
                 <div class=" row col-6 col-s-12">
                 
                     <div class="col-12">
-                        <img src="Profile.jpg" class="profile" alt="Avatar">
+                        <img src="img/Profile.jpg" class="profile" alt="Avatar">
                     </div>
                     <div class="col-12">
                         <p>RWD-1058</p><div class="myName">soung oo paing</div>
@@ -51,6 +52,9 @@
     </div>
     <!-- whitespace------------------------------------------------------------------------------------------- -->
     <div class="second_container">
+        <div class="row credit">This data is belonged to  
+            <a href="https://twitter.com/TheInsights_Ti" target="_blank">The Insights</a>
+        </div>
         <div class="row">
             <div class="death_toll col-4">
                 <table>
@@ -80,20 +84,24 @@
                     </tr>
                 </table>
             </div>
-            <div class="death_toll chart"><div id="genderchart" style="width: 300px; height: 600px;"></div></div>
-            <div class="death-img col-4 "><img id="myImg" src="death.jpg" alt="deathrate">
-                <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
+
+            <div class="death_toll chart">
+                <div id="genderchart" style="width: 300px; height: 600px;">
+                </div>
+            </div>
+
+            <div class="death-img col-4 ">
+                <img id="deathimg" src="img/death.jpg" alt="Death Rate">
+                <div id="deathPic" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
                 <div id="caption"></div>
               </div>
             </div>
         </div>
-        <div class="row death_toll">This data is belonged to  
-            <a href="https://twitter.com/TheInsights_Ti"  target="_blank">The Insights</a></div>
     </div>
     <!-- Flashcard---------------------------------------------------------------------------------------------  -->
-    <div class="third_container">
+    <!-- <div class="third_container">
         <div class="flashcard-container" id="quiz">
             <div id="question_text">Question Text</div>
             <ul>
@@ -104,6 +112,6 @@
             </ul>
             <button id="flashcard_btn">Submit</button>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

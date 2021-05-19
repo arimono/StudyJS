@@ -66,32 +66,25 @@ body {
     margin: 0;
     min-height: 100vh;
     color: #fff;
-    
     font-size: 2rem;
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     
 }
 
+
 .main_container{
-    
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    background-color: #02001859;
+    background-image: linear-gradient(315deg, #161316 0%, #000000 74%);
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100%;
     padding: 5em 2em;
     position: relative;
     text-align: center;
-    
-    
-    /* align-items: center; */
 }
 
 .main_container:before{
     content: "";
-    background-image: url(./sky.jpg);
+    background-image: url(../img/sky.jpg);
     display: block;
     position: absolute;
     left: 0;
@@ -104,24 +97,25 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    background-size: 150% 150%;
+    -webkit-animation: Animate 200s ease-in-out infinite;
+    -moz-animation: Animate 200s ease-in-out infinite;
+    animation: Animate 200s ease-in-out infinite;
 }
 
 #canvas_box{
     position: relative;
     display: block;
     width: 80%;
-    
-    /* padding: 1rem; */
     color: white;
     border-width: 4px;
     border-style: solid;
     border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;
     box-shadow: 5px 5px 50px #010309;
-    
     text-align: center;
     align-items: center;
     display: flex;
-    /* justify-content: center; */
     flex-wrap: wrap;
 }
 
@@ -188,7 +182,7 @@ h4{
 }
 /* death toll--------------------------------------------------------------------------------------------- */
 .second_container{
-    background: linear-gradient(159deg, #000000, #1a0566);
+    background: linear-gradient(159deg, #000000, #04020c);
     background-size: 400% 400%;
     min-height: 600px;
     -webkit-animation: blackspace 21s ease infinite;
@@ -213,6 +207,144 @@ h4{
 }
     
 
+
+/* death toll table------------------------------------------------------------------ */
+.death_toll{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem 5rem;
+    text-transform: capitalize;
+}
+.death_tr{
+    background-color: #eb081a;
+    
+}
+.death_td{
+    padding: 1rem 3rem;
+}
+.caption_td{
+    padding: 3rem 1.5rem 0.3rem;
+}
+
+.chart{
+    margin-top: 80px;
+}
+.death-img{
+    display: flex;
+    justify-content: center;
+    
+}
+.credit{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 3rem 0rem;
+    text-transform: capitalize;
+}
+
+/* IMGZOOM----------------------------- */
+#deathimg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #deathimg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  
+a{
+    font-size: 2.5rem;
+    text-decoration-line: none;
+    line-height: inherit;
+}
+
+a:active {
+    color: #eb081a;
+}
+a:visited {
+    color: #eb081a;
+    opacity: 0.8;
+}
+a:hover {
+    color: lime; 
+}
+
+@media only screen and (max-width: 400px) {
+    body{font-size: 2vw;}
+    .myName{font-size: 2.3vw;}
+    h4{font-size: 1vw;}
+    .small-text{font-size: 1.7vw;}
+    
+}
 /* Flashcard--------------------------------------------------------------------------------------------- */
 .third_container{
     margin: 0;
@@ -226,7 +358,7 @@ h4{
 }
 .third_container:before{
     content: "";
-    background-image: url(./city.jpg);
+    background-image: url(../img/city.jpg);
     display: block;
     position: absolute;
     left: 0;
@@ -289,135 +421,4 @@ ul li label{
     text-align: center;
     min-height: 5cm;
     font-size: 1.5rem;
-}
-/* death toll table------------------------------------------------------------------ */
-.death_toll{
-    display: flex;
-    justify-content: center;
-    padding: 2rem 3rem 5rem;
-    text-transform: capitalize;
-}
-.death_tr{
-    background-color: #eb081a;
-    
-}
-.death_td{
-    padding: 1rem 3rem;
-}
-.caption_td{
-    padding: 3rem 1.5rem 0.3rem;
-}
-.chart{
-    margin-top: 80px;
-    
-    
-}
-.death-img{
-    display: flex;
-    justify-content: center;
-    
-}
-
-
-
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  #myImg:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation */
-  .modal-content, #caption {  
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform: scale(0.1)} 
-    to {transform: scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  }
-a{
-    font-size: 2.5rem;
-    text-decoration-line: none;
-    line-height: inherit;
-}
-
-a:active {
-    color: #eb081a;
-}
-a:visited {
-    color: #eb081a;
-    opacity: 0.8;
-}
-a:hover {
-    color: lime; 
-}
-@media only screen and (max-width: 400px) {
-    body{font-size: 2vw;}
-    .myName{font-size: 2.3vw;}
-    h4{font-size: 1vw;}
-    .small-text{font-size: 1.7vw;}
-    
 }
