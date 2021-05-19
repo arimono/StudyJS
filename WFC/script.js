@@ -119,3 +119,66 @@ flashcard_btn.addEventListener("click",()=>{
     }
 }
 });
+// googlechart------------------------------------------------
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Ratio', 'Gender ratio'],
+  ['Female', 6.2],
+  ['Unidentified', 9.2],
+  ['Male', 84.6],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {
+    'title':'gender ratio',
+    titleTextStyle: {color: '#fff', fontSize: 30},
+    colors:['#D2042D','#ff6347','#eb081a'],
+    backgroundColor: {
+        fill: '#fff',
+        fillOpacity: 0
+      },
+      pieHole: 0.4,
+      chartArea:{left:0,top:50,width:'300%'},
+      pieSliceBorderColor : "#5A5A5A",
+      fontSize: 15,
+      tooltip: {textStyle: {color: 'red'}},
+      legend: {position: 'bottom',
+      textStyle: {color: 'white',fontSize: 16}},
+      
+    };
+    
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('genderchart'));
+  chart.draw(data, options);
+}
+$(window).resize(function(){
+    drawChart();
+  });
+
+
+//test
+  // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}

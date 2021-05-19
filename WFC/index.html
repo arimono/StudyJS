@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"defer></script>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
 <body>
     <div class="main_container">
         <div id="canvas_box">
@@ -50,8 +52,45 @@
     <!-- whitespace------------------------------------------------------------------------------------------- -->
     <div class="second_container">
         <div class="row">
-            maybe some card?
+            <div class="death_toll col-4">
+                <table>
+                    <tr class="small-text">
+                        <td class="caption_td">recorded date</td>
+                    </tr>
+                    <tr class="death_tr">
+                        <td class="death_td">100<sup>th</sup> day</td>
+                    </tr>
+                    <tr class="small-text">
+                        <td class="caption_td">no. of confirmed casualties</td>
+                    </tr>
+                    <tr class="death_tr">
+                        <td class="death_td">823 deaths</td>
+                    </tr>
+                    <tr class="small-text">
+                        <td class="caption_td">yongest death</td>
+                    </tr>
+                    <tr class="death_tr">
+                        <td class="death_td" style="text-transform: none;">5 y/o</td>
+                    </tr>
+                    <tr class="small-text">
+                        <td class="caption_td">oldest death</td>
+                    </tr>
+                    <tr class="death_tr">
+                        <td class="death_td" style="text-transform: none;">78 y/o</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="death_toll chart"><div id="genderchart" style="width: 300px; height: 600px;"></div></div>
+            <div class="death-img col-4 "><img id="myImg" src="death.jpg" alt="deathrate">
+                <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+              </div>
+            </div>
         </div>
+        <div class="row death_toll">This data is belonged to  
+            <a href="https://twitter.com/TheInsights_Ti"  target="_blank">The Insights</a></div>
     </div>
     <!-- Flashcard---------------------------------------------------------------------------------------------  -->
     <div class="third_container">
