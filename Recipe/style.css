@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+    /* For phones */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For tablets: */
+    .col-m-1 {
+        width: 8.33%;
+    }
+    .col-m-2 {
+        width: 16.66%;
+    }
+    .col-m-3 {
+        width: 25%;
+    }
+    .col-m-4 {
+        width: 33.33%;
+    }
+    .col-m-5 {
+        width: 41.66%;
+    }
+    .col-m-6 {
+        width: 50%;
+    }
+    .col-m-7 {
+        width: 58.33%;
+    }
+    .col-m-8 {
+        width: 66.66%;
+    }
+    .col-m-9 {
+        width: 75%;
+    }
+    .col-m-10 {
+        width: 83.33%;
+    }
+    .col-m-11 {
+        width: 91.66%;
+    }
+    .col-m-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'Merienda One', cursive;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.recipe_container {
+    width: 400px;
+    background-color: rgb(244, 244, 255);
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: block;
+    padding: 1rem;
+    height: 65px;
+}
+
+#search_text{
+    border: 1px solid red;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    float:right;
+    margin: 0px 10px;
+    position: relative;
+    display: none;
+    animation: input_size 1s ;
+    font-family: inherit;
+}
+
+@keyframes input_size_fade {
+    from {width: 175px;opacity: 1; }
+    to {width: 0;opacity: 0; } 
+    }
+
+@keyframes input_size {
+from {width: 0px;opacity: 0; }
+to {width: 175px;opacity: 1; } 
+}
+
+header button {
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#search{
+    float: right;
+    
+}
+#nav_bar{
+    float: left;
+}
+
+.fav_container {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.979);
+    overflow: auto;
+    display: flex;
+}
+
+.fav_meals {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.fav_meals li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 105px;
+    padding: 15px;
+}
+
+.fav_meals li img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 75px;
+    width: 75px;
+    border: 2px solid #98ff8a83;
+}
+
+.fav_meals li span{
+    font-size: 0.9rem;
+}
+
+.fav_container::-webkit-scrollbar {
+    width: 100px;
+}
+
+.meal{
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #bbbbbb8a;
+    margin: 1.5rem;
+}
+
+.meal{
+    position: relative;
+}
+
+.meal .random{
+    position: absolute;
+    top: 1rem;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: white;
+    font-size: 1.3rem;
+    height: 40px;
+    width: 30px;
+    overflow: hidden;
+    transition: width 1s;
+    transition-timing-function: ease;
+}
+
+.meal .random:hover{
+    width: 220px;
+}
+
+.meal_header img{
+    object-fit: cover;
+    height: 250px;
+    width: 100%;    
+}
+
+.meal_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.meal_body h4{
+    margin: 0;
+}
+.love_react{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.love_react.active{
+    color: red;
+}

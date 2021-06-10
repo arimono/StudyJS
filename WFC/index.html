@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../WFC/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../WFC/js/script.js"defer></script>
+    <script src="./js/script.js"defer></script>
     </head>
 <body class="body_container">
-    <div class="main_container" >
+    <div id="main_container" >
         <div id="canvas_box">
             <div class="row">
                 <div class=" row col-6 col-s-12">
@@ -20,11 +20,11 @@
                         <img src="img/Profile.jpg" class="profile" alt="Avatar">
                     </div>
                     <div class="col-12">
-                        <p>RWD-1058</p><div class="myName">soung oo paing</div>
+                        <p style="font-size: 1.2rem; padding: 10px; letter-spacing: 2px" >21.9162° N, 95.9560° E</p><div class="myName">myanmar</div>
                     </div>
 
                 </div> 
-                <div class="col-6 col-s-12"><h4 style="text-transform: capitalize"> been doomed for</h4>
+                <div class="col-6 col-s-12"><h4 style="text-transform: capitalize; padding-top: 10px; letter-spacing: 2px"> been doomed for</h4>
                     <div class="countdown-container">
                         <div class="count-c">
                             <p class="small-text" id="days">0</p>
@@ -50,9 +50,9 @@
             </div>
         </div>
     </div>
-    <!-- whitespace------------------------------------------------------------------------------------------- -->
-    <div class="second_container">
-        <div class="row credit">This data is belonged to  
+    <!-- deathtoll------------------------------------------------------------------------------------------- -->
+    <div id="second_container">
+        <div class="row credit">The data are belonged to  
             <a href="https://twitter.com/TheInsights_Ti" target="_blank">The Insights</a>
         </div>
         <div class="row">
@@ -91,27 +91,76 @@
             </div>
 
             <div class="death-img col-4 ">
-                <img id="deathimg" src="img/death.jpg" alt="Death Rate">
-                <div id="deathPic" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                <div id="caption"></div>
+                <a href="#img_0"><img class="second-cont-img" src="img/death.jpg"></a>
+                <a href="#_0" class="lightbox trans" id="img_0"><img src="img/death.jpg" style="height: 100%;"></a>
               </div>
             </div>
         </div>
     </div>
-    <!-- Flashcard---------------------------------------------------------------------------------------------  -->
-    <!-- <div class="third_container">
-        <div class="flashcard-container" id="quiz">
-            <div id="question_text">Question Text</div>
-            <ul>
-                <li><input type="radio" id="a" name="answer" class="answer"><label id="a_ans" for="a">answer</label></li>
-                <li><input type="radio" id="b" name="answer" class="answer"><label id="b_ans" for="b">answer</label></li>
-                <li><input type="radio" id="c" name="answer" class="answer"><label id="c_ans" for="c">answer</label></li>
-                <li><input type="radio" id="d" name="answer" class="answer"><label id="d_ans" for="d">answer</label></li>
-            </ul>
-            <button id="flashcard_btn">Submit</button>
+    
+   <div id="third_container">
+       <div class="thrid_box">
+           <div class="row red">
+                <div class="small_box col-6"><h4>Coup d'état in Myanmar</h4></div>
+                <div class="small_box black col-6">A coup d'état in Myanmar began on the morning of 1<sup>st</sup> February 2021, when democratically elected members of the country's ruling party, the National League for Democracy (NLD), were deposed by the Tatmadaw—Myanmar's military—which then vested power in a stratocracy. </div>
+            </div>
+        <div class="row red">
+            <div class="small_box black col-6">Three-fingered salute that originated in the Hunger Games film series has been adopted by activists from Thailand to Myanmar, becoming a symbol of resistance and solidarity for democracy movements across south-east Asia. <h3 style="text-align: right; color:red;">Three-fingered salute</h3></div>
+            <div class="col-6"><img src="./img/3finger.jpg" class="third-cont-img" alt="">
+            </div>
         </div>
-    </div> -->
+        <div class="row red">
+            <div class="col-6"><img src="./img/SUflag.jpg" class="third-cont-img" alt="">
+                
+            </div>
+            <div class="small_box black col-6">The All Burma Federation of Student Unions (ABFSU) is an umbrella organisation for student unions in Burma (also Myanmar) and an active voice for academic freedoms and student rights throughout the country.  <h3 style="text-align: right; color:red;">ABFSU</h3></div>
+        </div>
+    </div>
+   </div>
+<!-- test -->
+<div id="forth_container">
+    <h4 class="forthhead">Spring Revolution Gallery</h4>
+	<div class="top">
+        
+    	<ul>
+        	<li><a href="#img_1"><img src="./img/rev1.jpg"><div class="text">1</div></a></li>
+            <li><a href="#img_2"><img src="./img/rev2.jpg"><div class="text">2</div></a></li>
+            <li><a href="#img_3"><img src="./img/rev3.webp"><div class="text">3</div></a></li>
+            <li><a href="#img_4"><img src="./img/rev4.jpg"><div class="text">4</div></a></li>
+            <li><a href="#img_5"><img src="./img/rev5.jpg"><div class="text">5</div></a></li>
+            <li><a href="#img_6"><img src="./img/rev6.jpg"><div class="text">6</div></a></li>
+            <li><a href="#img_7"><img src="./img/rev7.jpg"><div class="text">7</div></a></li>
+            <li><a href="#img_8"><img src="./img/rev8.jpg"><div class="text">8</div></a></li>
+            <li><a href="#img_9"><img src="./img/rev9.jpg"><div class="text">9</div></a></li>
+            <li><a href="#img_10"><img src="./img/rev10.jpg"><div class="text">10</div></a></li>
+            <li><a href="#img_11"><img src="./img/rev11.jpg"><div class="text">11</div></a></li>
+            <li><a href="#img_12"><img src="./img/rev12.jpg"><div class="text">12</div></a></li>
+            <li><a href="#img_13"><img src="./img/rev13.jpg"><div class="text">13</div></a></li>
+            <li><a href="#img_14"><img src="./img/rev14.jpg"><div class="text">14</div></a></li>
+            <li><a href="#img_15"><img src="./img/rev15.jpg"><div class="text">15</div></a></li>
+            <li><a href="#img_16"><img src="./img/rev16.jpg"><div class="text">16</div></a></li>
+        </ul>
+        
+        <a href="#_1" class="lightbox trans" id="img_1"><img src="./img/rev1.jpg"></a>
+        <a href="#_2" class="lightbox trans" id="img_2"><img src="./img/rev2.jpg"></a>
+        <a href="#_3" class="lightbox trans" id="img_3"><img src="./img/rev3.webp"></a>
+        <a href="#_4" class="lightbox trans" id="img_4"><img src="./img/rev4.jpg"></a>
+        <a href="#_5" class="lightbox trans" id="img_5"><img src="./img/rev5.jpg"></a>
+        <a href="#_6" class="lightbox trans" id="img_6"><img src="./img/rev6.jpg"></a>
+        <a href="#_7" class="lightbox trans" id="img_7"><img src="./img/rev7.jpg"></a>
+        <a href="#_8" class="lightbox trans" id="img_8"><img src="./img/rev8.jpg"></a>
+        <a href="#_9" class="lightbox trans" id="img_9"><img src="./img/rev9.jpg"></a>
+        <a href="#_10" class="lightbox trans" id="img_10"><img src="./img/rev10.jpg"></a>
+        <a href="#_11" class="lightbox trans" id="img_11"><img src="./img/rev11.jpg"></a>
+        <a href="#_12" class="lightbox trans" id="img_12"><img src="./img/rev12.jpg"></a>
+        <a href="#_13" class="lightbox trans" id="img_13"><img src="./img/rev13.jpg"></a>
+        <a href="#_14" class="lightbox trans" id="img_14"><img src="./img/rev14.jpg"></a>
+        <a href="#_15" class="lightbox trans" id="img_15"><img src="./img/rev15.jpg"></a>
+        <a href="#_16" class="lightbox trans" id="img_16"><img src="./img/rev16.jpg"></a>
+    </div>
+</div>
+<footer>
+    <p>RWD-1058</p>
+</footer>
 </body>
 </html>

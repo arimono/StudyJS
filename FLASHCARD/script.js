@@ -39,7 +39,7 @@ loadQuiz();
 
 function loadQuiz(){
     deselectAns();
-    const currentQuizData = flashCardData[currentQuestion];
+    const currentQuizData = flashCardData[currentQuestion];//array no1,2,3 etc
     questionEle.innerText = currentQuizData.question;
     a_ans.innerText = currentQuizData.a;
     b_ans.innerText = currentQuizData.b;
@@ -50,8 +50,6 @@ function loadQuiz(){
 }
 
 function getSelected(){
-    // const answerEle = document.querySelectorAll('answer');
-    // let answer = undefined;
     answerEle.forEach((answerEle) =>{
         if(answerEle.checked){
             answer = answerEle.id;
@@ -69,8 +67,6 @@ function deselectAns(){
 }
 
 flashcard_btn.addEventListener("click",()=>{
-    // currentQuestion++;
-
     const answer = getSelected();
     if(answer){
         if(answer===flashCardData[currentQuestion].correctAns){
